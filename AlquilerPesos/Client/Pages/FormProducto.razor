@@ -1,0 +1,60 @@
+﻿@using Alquiler.BD.Data.Entidades
+
+<EditForm Model="producto" OOnValidSubmit="onValidSubmit">
+    <DataAnnotationsValidator/>
+    <div>
+
+        <label>Id</label>
+        <div>
+
+            <InputNumber class="form-control" @bind-Value= "@producto.Id"/>
+            <ValidationMessage For="@(()=> producto.Id)"/>
+        </div>
+
+        <label>Nombre</label>
+        <div>
+
+            <InputText class="form-control" @bind-Value= "@producto.NombreProducto"/>
+            <ValidationMessage For="@(()=> producto.NombreProducto)"/>
+        </div>
+
+        <label>Precio</label>
+        <div>
+
+            <InputNumber class="form-control" @bind-Value= "@producto.PrecioProducto"/>
+            <ValidationMessage For="@(()=> producto.PrecioProducto)"/>
+        </div>
+
+        <label>Detalle</label>
+        <div>
+
+            <InputText class="form-control" @bind-Value= "@producto.DetallesProducto"/>
+            <ValidationMessage For="@(()=> producto.DetallesProducto)"/>
+        </div>
+
+                <label>Foto</label>
+        <div>
+
+            <InputFile class="form-control" @bind-Value= "@producto.Fotos"/>
+            <ValidationMessage For="@(()=> producto.Fotos)"/>
+        </div>
+
+
+
+
+
+
+
+
+
+
+    </div>
+
+</EditForm>
+
+
+@code {
+    [Parameter] public Producto producto { get; set; }
+    [Parameter] public EventCallback onValidSubmit { get; set; }
+    [Parameter] public EventCallback onCancel { get; set; }
+}
