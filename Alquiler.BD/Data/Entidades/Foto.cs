@@ -4,6 +4,7 @@
     {
         public int Id { get; set; }
 
+
         public string Fotos { get; set; }
 
 
