@@ -1,0 +1,376 @@
+﻿@page "/Cliente"
+
+<h3>Registrar_Cliente</h3>
+
+<html>
+<head>
+    <title>Registrar Usuario</title>
+
+
+
+
+    <link rel=" icon" href="~/css/" />
+    <style>
+        body {
+            font-family: Helvetica;
+            margin: 0;
+        }
+
+        header {
+            display: flex;
+            position: fixed;
+            top: -3px;
+            left: 0px;
+            width: 5000px;
+            background-color: RGB(254, 189, 89);
+            height: 120px;
+            padding: 0;
+        }
+
+        #banner h1 {
+            position: fixed;
+            top: 24px;
+            left: 250px;
+            font-size: 50px;
+            font-family: Helvetica;
+            text-shadow: 5px 1.5px 10px #494949;
+        }
+
+        .nav-link {
+            color: black
+        }
+
+
+            .nav-link:hover {
+                color: #868686
+            }
+
+        .lupa {
+            position: fixed;
+            left: 1320px;
+            top: 24px;
+            font-size: 23px;
+            color: black;
+        }
+
+        .caja-buscador {
+            position: fixed;
+            border-radius: 30px;
+            background-color: rgb(248, 248, 248);
+            top: 21px;
+            left: 842px;
+            height: 40px;
+            width: 450px;
+        }
+
+        header .toggle-btn span {
+            position: absolute;
+            font-size: 4rem;
+            cursor: pointer;
+        }
+
+        #btn-menu {
+            display: none;
+        }
+
+
+
+        .cont-menu {
+            width: 100%;
+            max-width: 250px;
+            background: rgb(36, 34, 34);
+            height: 100vh;
+            position: relative;
+            transition: all 500ms ease;
+            visibility: hidden;
+            transform: translateX(-100%);
+        }
+
+        #btn-menu:checked ~ .cont-menu {
+            visibility: visible;
+            transform: translateX(0%);
+            position: fixed;
+        }
+
+
+        .cont-menu nav {
+            transform: translateY(15%);
+        }
+
+            .cont-menu nav a {
+                display: block;
+                text-decoration: none;
+                padding: 30px;
+                border-left: 5px solid transparent;
+                transition: all 40ms ease;
+                color: white;
+                transition: all 2000ms transparent;
+            }
+
+                .cont-menu nav a:hover {
+                    border-left: 5px solid #c7c7c7;
+                    background: #292929;
+                }
+
+
+        .cont-menu label {
+            position: absolute;
+            right: 5px;
+            top: 7px;
+            color: #c7c7c7;
+            font-size: 35px;
+            cursor: pointer;
+        }
+
+        #textos h1 {
+            position: absolute;
+            font-size: 36px;
+            top: 113%;
+            left: 17%;
+            font-family: Helvetica;
+        }
+
+        #banner nav {
+            display: flex;
+            position: fixed;
+            left: 900px;
+            top: 70px;
+            text-decoration: none;
+        }
+
+        .buscador {
+            position: fixed;
+            left: 847px;
+            top: 21px;
+            border: none;
+            background: none;
+            outline: none;
+            float: left;
+            line-height: 40px;
+            padding: 0px 20px;
+            color: rgb(2, 2, 2);
+        }
+
+        #banner nav:hover {
+            color: dimgrey;
+        }
+
+    </style>
+</head> @*Estilo*@
+<body>
+    <header>
+
+        <div class="toggle-btn">
+            <label for="btn-menu" class=icon-menu>
+
+
+                <span>&#9776</span>
+
+
+            </label>
+        </div>
+
+        <input type="checkbox" id="btn-menu">
+        <div class="cont-menu">
+            <nav>
+                <a href="/">Pagina principal</a>
+                <a href="/producto">Registrar productos</a>
+                <a href="/misProductos">Mis productos</a>
+            </nav>
+            <div class="salir">
+                <label for="btn-menu" class=icon-menu>
+
+                    <span>&#x21d0;</span>
+
+                </label>
+            </div>
+        </div>
+        <section id="banner">
+            <div class="palabra">
+                <h1>¡Alquiler por 2 pesos!</h1>
+            </div>
+            <nav>
+                <a href="" class="nav-link">Categoria/Rubro</a>
+                <a href="" class="nav-link">Precio</a>
+                <a href="" class="nav-link">Ubicacion</a>
+            </nav>
+
+            <div class="lupa">
+                <span>&#127859</span>
+            </div>
+            <div class="caja-buscador">
+            </div>
+        </section>
+        <section id="textos">
+
+            <div>
+                <h1>Registrar cliente</h1>
+            </div>
+
+
+
+
+        </section>
+        <input class="buscador" type="text" name="" placeholder="Buscar producto">
+
+
+        <div style="
+display:flex">
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+        <label style="position: fixed;top: 303px;left: 612px;">Ingrese una contraseña</label><input type="text" style="position: fixed;top: 299px;left: 816px;">
+        <label style="
+    position: fixed;
+    top: 360px;
+    left: 613px;
+">Repetir contraseña</label><input type="text" style="
+    position: fixed;
+    top: 356px;
+    left: 815px;
+"><label style="
+    position: fixed;
+    top: 492px;
+    left: 612px;
+">Domicilio</label>
+        <label style="
+    position: fixed;
+    top: 557px;
+    left: 614px;
+">Provincia</label>
+        <label style="
+    position: fixed;
+    top: 623px;
+    left: 622px;
+">Barrio</label>
+        <label style="
+    position: fixed;
+    top: 688px;
+    left: 624px;
+">Piso</label>
+        <labe style="
+    position: fixed;
+    top: 744px;
+    left: 605px;
+">Referencia</labe>
+        <input type="text" style="
+    position: fixed;
+    top: 553px;
+    left: 697px;
+">
+        <input type="text" style="
+    position: fixed;
+    top: 620px;
+    left: 696px;
+">
+        <input type="text" style="
+    position: fixed;
+    top: 686px;
+    left: 695px;
+">
+        <input type="text" style="
+    position: fixed;
+    top: 739px;
+    left: 695px;
+    width: 900px;
+">
+        <labe style="
+    position: fixed;
+    top: 557px;
+    left: 932px;
+">
+            Departamento
+        </labe><label style="
+    position: fixed;
+    top: 623px;
+    left: 932px;
+">
+            Calle
+        </label>
+        <label style="
+    position: fixed;
+    top: 688px;
+    left: 932px;
+">
+            Depto
+        </label><input type="text" style="
+    position: fixed;
+    top: 553px;
+    left: 1051px;
+">
+        <input type="text" style="
+    position: fixed;
+    top: 620px;
+    left: 1051px;
+">
+        <input type="text" style="
+    position: fixed;
+    top: 688px;
+    left: 1051px;
+">
+        <label style="
+    position: fixed;
+    top: 557px;
+    left: 1298px;
+">Localidad</label>
+        <label style="
+    position: fixed;
+    top: 623px;
+    left: 1292px;
+">Altura</label>
+        <label style="position: fixed;top: 688px;left: 1298px;">CP</label><input type="text" style="
+    position: fixed;
+    top: 553px;
+    left: 1391px;
+">
+        <input type="text" style="
+    position: fixed;
+    top: 620px;
+    left: 1391px;
+">
+        <input type="text" style="
+    position: fixed;
+    top: 688px;
+    left: 1391px;
+">
+        <label style="
+    position: fixed;
+    top: 299px;
+    left: 1173px;
+">Foto de perfil</label>
+
+        <label style=""></label><input type="submit" style="
+          background-color: rgb(84, 84, 245);
+    color: white;
+    font-weight: bold;
+    border-radius: 10px;
+    padding: 10px;
+    border-color: rgb(131, 129, 129);
+    border: 2px solid rgb(131, 129, 129);
+    cursor: pointer;
+     position: fixed;
+    top: 650px;
+    left: 1700px;
+    color: white;">
+
+
+
+    </header>
+</body> @*Codigo*@
+</html>
+
+
+
+@code {
+
+}
