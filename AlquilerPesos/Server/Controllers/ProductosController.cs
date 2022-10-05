@@ -8,11 +8,11 @@ namespace AlquilerPesos.Server.Controllers
 {
     [Route("api/Productos")]
     [ApiController]
-    public class ProductController : ControllerBase
+    public class ProductosController : ControllerBase
     {
         private readonly Bdcontext context;
 
-        public ProductController(Bdcontext context)
+        public ProductosController(Bdcontext context)
         {
             this.context = context;
         }
@@ -35,7 +35,7 @@ namespace AlquilerPesos.Server.Controllers
 
             if (venta == null)
             {
-                return NotFound($"No existe venta de id: {id}");
+                return NotFound($"No existe Producto de id: {id}");
             }
             return venta;
         }
@@ -64,7 +64,7 @@ namespace AlquilerPesos.Server.Controllers
 
             if (id != producto.Id)
             {
-                return BadRequest("No exuiste alquiler");
+                return BadRequest("No existe el Producto");
             }
 
             var produ = context.Productos.Where(e => e.Id == id).FirstOrDefault();
@@ -72,7 +72,7 @@ namespace AlquilerPesos.Server.Controllers
 
             if (produ == null)
             {
-                return NotFound("No existe el alquiler");
+                return NotFound("No existe el Producto");
             }
 
             produ.NombreProducto = producto.NombreProducto;
